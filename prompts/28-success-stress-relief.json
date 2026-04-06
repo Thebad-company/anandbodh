@@ -1,0 +1,12 @@
+{
+  "prompt": "Peaceful Indian person in their 30s sitting in meditation by lake at sunset, relaxed and content expression, stress-free and calm demeanor, natural outdoor setting with water and trees, golden hour lighting, serene atmosphere, authentic lifestyle photography, comfortable clothing, eyes closed in peaceful meditation, photorealistic, professional photography, mental wellness success story, warm orange and gold tones",
+  "negative_prompt": "stressed, worried, dark, clinical, indoor, artificial lighting, multiple people, busy background, city, traffic, cartoon, illustration, low quality, blurry, night, rain, cold",
+  "width": 800,
+  "height": 600,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "photorealistic",
+  "quality": "high",
+  "filename": "success-stress-relief.jpg"
+}

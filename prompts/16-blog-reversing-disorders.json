@@ -1,0 +1,12 @@
+{
+  "prompt": "Transformation concept showing Indian person's wellness journey, split image composition with before on left (tired, low energy) and after on right (vibrant, healthy, smiling), hopeful and inspiring, professional photography, warm natural lighting, person looking healthier and more energetic on right side, natural outdoor setting with greenery, health transformation concept, photorealistic, positive energy, authentic lifestyle photography",
+  "negative_prompt": "sad, clinical, hospital, dark, depressing, extreme weight change, medical equipment, indoor, artificial lighting, cartoon, illustration, dramatic, exaggerated, text, labels",
+  "width": 1200,
+  "height": 630,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "photorealistic",
+  "quality": "high",
+  "filename": "blog-reversing-disorders.jpg"
+}

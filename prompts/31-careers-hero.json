@@ -1,0 +1,12 @@
+{
+  "prompt": "Professional team of diverse wellness experts working together in modern office, collaborative environment, natural lighting, warm and inclusive atmosphere, people of different backgrounds and ages, teamwork concept, professional photography, gold and cream color scheme, inspiring and welcoming",
+  "negative_prompt": "corporate sterile, cold, artificial, dark, competitive, stressed, isolated, cartoon, illustration, low quality",
+  "width": 1920,
+  "height": 1080,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "photorealistic",
+  "quality": "high",
+  "filename": "hero-careers.png"
+}

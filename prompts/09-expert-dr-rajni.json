@@ -1,0 +1,12 @@
+{
+  "prompt": "Professional headshot portrait of confident Indian female doctor in her 40s, warm genuine smile, compassionate and kind expression, wearing professional casual attire in cream or earth tones, natural soft lighting from window, neutral cream #FDFBF7 background with subtle texture, approachable and trustworthy, high-quality portrait photography, wellness expert, natural skin tones, professional but warm, shallow depth of field, 4K quality, photorealistic",
+  "negative_prompt": "clinical white coat, hospital, stethoscope, serious, stern, dark background, harsh lighting, oversaturated, cartoon, illustration, low quality, blurry, text, watermark, sunglasses, hat",
+  "width": 800,
+  "height": 800,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "portrait photography",
+  "quality": "high",
+  "filename": "expert-dr-rajni-samota.jpg"
+}

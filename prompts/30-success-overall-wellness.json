@@ -1,0 +1,12 @@
+{
+  "prompt": "Joyful Indian family of three generations doing yoga together in garden, vibrant and healthy appearance, overall wellness and happiness visible, natural outdoor setting with flowers and greenery, warm morning sunlight, holistic health concept, authentic lifestyle photography, comfortable yoga attire, genuine smiles and laughter, photorealistic, professional photography, complete wellness transformation, warm color palette, inspiring and uplifting",
+  "negative_prompt": "clinical, hospital, indoor, dark, artificial lighting, sad, serious, competitive, gym, cartoon, illustration, low quality, blurry, night, rain, posed studio shot, formal",
+  "width": 800,
+  "height": 600,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "photorealistic",
+  "quality": "high",
+  "filename": "success-overall-wellness.jpg"
+}

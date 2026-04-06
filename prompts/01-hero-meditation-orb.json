@@ -1,0 +1,12 @@
+{
+  "prompt": "A serene Indian woman in her 30s meditating in lotus position, surrounded by a glowing golden energy orb with subtle particle effects, peaceful natural background with soft morning light filtering through trees, warm color palette with gold #D4AF37 and cream #FDFBF7 tones, professional wellness photography, cinematic lighting, 4K quality, photorealistic, shallow depth of field, bokeh background, natural skin tones, peaceful expression, eyes gently closed",
+  "negative_prompt": "cartoon, anime, illustration, low quality, blurry, dark, gloomy, clinical, hospital, artificial, fake, oversaturated, neon, harsh lighting, multiple people, busy background, text, watermark",
+  "width": 1920,
+  "height": 1080,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "photorealistic",
+  "quality": "high",
+  "filename": "hero-meditation-orb.jpg"
+}

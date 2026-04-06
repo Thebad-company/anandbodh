@@ -1,0 +1,12 @@
+{
+  "prompt": "Diverse group of people in online community discussion, virtual meeting, connected and engaged, warm lighting, supportive atmosphere, modern technology, collaborative energy, professional photography, gold and cream tones, inclusive and welcoming",
+  "negative_prompt": "isolated, dark, cold, corporate, sterile, cartoon, low quality, artificial",
+  "width": 1200,
+  "height": 630,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "photorealistic",
+  "quality": "high",
+  "filename": "community-forum-banner.png"
+}

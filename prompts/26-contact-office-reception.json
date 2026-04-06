@@ -1,0 +1,12 @@
+{
+  "prompt": "Modern wellness center reception area in India, clean and inviting space, indoor plants including monstera and ferns, warm natural lighting from large windows, comfortable seating with cream cushions, wooden reception desk, professional interior photography, cream and gold color scheme, welcoming atmosphere, contemporary Indian design elements, peaceful and professional, natural materials, photorealistic, high-quality architectural photography",
+  "negative_prompt": "clinical, hospital, dark, cold, sterile, crowded, messy, artificial lighting, night, empty, cartoon, illustration, low quality, blurry, western corporate style, glass and steel only",
+  "width": 1200,
+  "height": 800,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "photorealistic",
+  "quality": "high",
+  "filename": "contact-office-reception.jpg"
+}

@@ -1,0 +1,12 @@
+{
+  "prompt": "Professional headshot of peaceful Indian male meditation instructor in his 50s, serene and centered expression, gentle smile, kind and wise eyes, wearing simple comfortable clothing, natural lighting, neutral cream background with subtle texture, calm and approachable presence, high-quality portrait photography, spiritual teacher, grounded and authentic, peaceful energy, professional yet warm",
+  "negative_prompt": "suit and tie, corporate, serious, stern, dark background, harsh lighting, overly formal, clinical, multiple people, full body, cartoon, illustration, low quality, blurry, sunglasses",
+  "width": 800,
+  "height": 800,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "portrait photography",
+  "quality": "high",
+  "filename": "expert-meditation-teacher.jpg"
+}

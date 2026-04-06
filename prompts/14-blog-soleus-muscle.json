@@ -1,0 +1,12 @@
+{
+  "prompt": "Anatomical 3D render of human soleus muscle in lower leg, blood flow visualization in red flowing through vessels, mitochondria highlighted in glowing gold particles, medical illustration showing glucose metabolism, educational and detailed, clean white cream background, scientific visualization, modern medical graphics, side view of calf, muscle fibers visible, professional medical illustration, high detail, clean composition",
+  "negative_prompt": "gore, overly realistic blood, dark, cluttered, cartoon, anime, low quality, blurry, full body, skeleton, bones visible, text, labels, diagrams",
+  "width": 1200,
+  "height": 630,
+  "guidance_scale": 8.0,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "medical 3D render",
+  "quality": "high",
+  "filename": "blog-soleus-muscle.jpg"
+}

@@ -1,0 +1,12 @@
+{
+  "prompt": "Split composition showing the same Indian person, left side: stressed and tense with worried expression, right side: calm and peaceful with relaxed smile, visual representation of stress transformation to peace, professional photography, warm to cool color transition from left to right, hopeful and educational, natural lighting, photorealistic, 4K quality, same person both sides, clear transformation, inspiring",
+  "negative_prompt": "extreme emotions, dark, depressing, clinical, multiple different people, cartoon, illustration, low quality, blurry, harsh lighting, text, watermark, crying, angry",
+  "width": 1200,
+  "height": 630,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "photorealistic",
+  "quality": "high",
+  "filename": "blog-stress-science.jpg"
+}

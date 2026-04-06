@@ -1,0 +1,12 @@
+{
+  "prompt": "Beautiful newsletter signup banner showing person reading wellness content on tablet, peaceful home environment, natural lighting, warm and inviting, gold and cream colors, modern design, lifestyle photography, inspiring and welcoming",
+  "negative_prompt": "corporate, sterile, dark, cluttered, cartoon, low quality, artificial",
+  "width": 1200,
+  "height": 400,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "photorealistic",
+  "quality": "high",
+  "filename": "newsletter-banner.png"
+}

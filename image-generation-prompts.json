@@ -1,0 +1,287 @@
+{
+  "project": "Anandbodh Wellness Platform",
+  "style_guide": {
+    "colors": ["#D4AF37", "#FDFBF7", "#F8F4ED", "#2C1810"],
+    "mood": "peaceful, warm, professional, holistic, inspiring",
+    "avoid": "clinical, sterile, corporate, cold"
+  },
+  "priority_1_essential": [
+    {
+      "id": "hero-homepage-meditation",
+      "filename": "hero-meditation-orb.jpg",
+      "dimensions": "1920x1080",
+      "prompt": "A serene Indian woman meditating in lotus position, surrounded by a glowing golden energy orb with subtle particle effects, peaceful natural background with soft morning light filtering through trees, warm color palette with gold and cream tones, professional wellness photography, cinematic lighting, 4K quality, photorealistic",
+      "negative_prompt": "cartoon, anime, illustration, low quality, blurry, dark, gloomy, clinical",
+      "style": "photorealistic",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "hero-soleus-program",
+      "filename": "hero-soleus-activation.jpg",
+      "dimensions": "1920x1080",
+      "prompt": "Anatomical illustration of human lower leg showing the soleus muscle highlighted in glowing gold color, clean medical illustration style with subtle texture, educational and professional, white cream background, side view of calf muscle, detailed muscle fibers visible, modern scientific visualization",
+      "negative_prompt": "cartoon, gore, overly detailed, cluttered, dark background",
+      "style": "medical illustration",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "hero-meditation-program",
+      "filename": "hero-meditation-program.jpg",
+      "dimensions": "1920x1080",
+      "prompt": "Peaceful Indian person in deep meditation with eyes closed, serene expression, soft golden light surrounding them, indoor meditation space with plants and natural wood elements, warm morning sunlight, spiritual and calming atmosphere, professional wellness photography, shallow depth of field",
+      "negative_prompt": "busy background, multiple people, dark, sad, clinical",
+      "style": "photorealistic",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "hero-ayurveda-program",
+      "filename": "hero-ayurveda-program.jpg",
+      "dimensions": "1920x1080",
+      "prompt": "Traditional Ayurvedic setup with herbs in wooden bowls, essential oils in amber glass bottles, copper vessels, ancient Sanskrit texts, warm golden hour lighting, authentic Indian cultural elements, professional still life photography, rustic wooden table, turmeric and spices visible",
+      "negative_prompt": "modern, plastic, artificial, cluttered, dark",
+      "style": "photorealistic",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "blog-meditation-medicine",
+      "filename": "blog-meditation-medicine.jpg",
+      "dimensions": "1200x630",
+      "prompt": "Person meditating with translucent brain scan overlay showing active neural regions in gold and purple, scientific meets spiritual concept, professional medical photography with artistic elements, clean composition, warm lighting, educational and inspiring",
+      "negative_prompt": "scary, dark, clinical, overly technical, cluttered",
+      "style": "photorealistic with overlay",
+      "aspect_ratio": "1.91:1"
+    },
+    {
+      "id": "blog-stress-science",
+      "filename": "blog-stress-science.jpg",
+      "dimensions": "1200x630",
+      "prompt": "Split composition showing stressed person on left (tense, worried) transforming to calm peaceful person on right (relaxed, smiling), visual representation of stress vs peace, professional photography with subtle graphic elements, warm to cool color transition, hopeful and educational",
+      "negative_prompt": "extreme emotions, dark, depressing, clinical",
+      "style": "photorealistic",
+      "aspect_ratio": "1.91:1"
+    },
+    {
+      "id": "blog-emotional-detox",
+      "filename": "blog-emotional-detox.jpg",
+      "dimensions": "1200x630",
+      "prompt": "Person releasing emotion through expressive movement or breathwork, arms raised, authentic and liberating expression, artistic wellness photography, soft natural lighting, outdoor nature setting, emotional freedom concept, warm golden tones",
+      "negative_prompt": "sad, crying, dark, clinical, posed",
+      "style": "photorealistic",
+      "aspect_ratio": "1.91:1"
+    },
+    {
+      "id": "blog-ayurveda-balance",
+      "filename": "blog-ayurveda-balance.jpg",
+      "dimensions": "1200x630",
+      "prompt": "Three sections showing elemental representations - air and space (Vata) with flowing clouds, fire and water (Pitta) with warm flames and water, earth and water (Kapha) with stones and flowing water, artistic elemental photography, balanced composition, natural elements, warm color palette",
+      "negative_prompt": "cartoon, illustration, dark, chaotic, unbalanced",
+      "style": "photorealistic",
+      "aspect_ratio": "1.91:1"
+    }
+  ],
+  "priority_2_important": [
+    {
+      "id": "hero-thrive-work",
+      "filename": "hero-thrive-work.jpg",
+      "dimensions": "1920x1080",
+      "prompt": "Professional Indian person meditating peacefully at modern office desk, eyes closed with serene expression, plants and natural light from window, laptop and notebook visible, work-life balance concept, contemporary lifestyle photography, warm natural lighting, peaceful office environment",
+      "negative_prompt": "stressed, cluttered, dark, corporate sterile",
+      "style": "photorealistic",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "hero-wake-up-life",
+      "filename": "hero-wake-up-life.jpg",
+      "dimensions": "1920x1080",
+      "prompt": "Person standing on mountain peak watching sunrise, arms raised in celebration and freedom, silhouette with golden sun rays breaking through, inspirational and uplifting, landscape photography, warm orange and gold tones, misty mountains in background, victorious pose",
+      "negative_prompt": "dark, gloomy, sad, dangerous, extreme sports",
+      "style": "photorealistic",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "community-group-circle",
+      "filename": "community-group-circle.jpg",
+      "dimensions": "1920x1080",
+      "prompt": "Diverse group of Indian people in circle formation doing yoga outdoors, aerial view from above, peaceful park setting with green grass, inclusive and welcoming atmosphere, community wellness photography, warm natural lighting, people of different ages, harmonious composition",
+      "negative_prompt": "crowded, chaotic, indoor, dark, competitive",
+      "style": "photorealistic",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "blog-soleus-muscle",
+      "filename": "blog-soleus-muscle.jpg",
+      "dimensions": "1200x630",
+      "prompt": "Anatomical 3D render of soleus muscle with blood flow visualization in red and mitochondria highlighted in gold, medical illustration showing glucose metabolism, educational and detailed, clean white background, scientific visualization, modern medical graphics",
+      "negative_prompt": "gore, overly realistic, dark, cluttered, cartoon",
+      "style": "medical 3D render",
+      "aspect_ratio": "1.91:1"
+    },
+    {
+      "id": "blog-divyanubhuti-dhyan",
+      "filename": "blog-divyanubhuti-dhyan.jpg",
+      "dimensions": "1200x630",
+      "prompt": "Person in deep meditation with glowing Om symbol (ॐ) in gold light at heart center, spiritual and peaceful, artistic photography with subtle visual effects, warm golden glow, serene expression, indoor meditation space, mystical yet grounded atmosphere",
+      "negative_prompt": "dark, scary, overly mystical, cartoon, cluttered",
+      "style": "photorealistic with effects",
+      "aspect_ratio": "1.91:1"
+    },
+    {
+      "id": "blog-reversing-disorders",
+      "filename": "blog-reversing-disorders.jpg",
+      "dimensions": "1200x630",
+      "prompt": "Transformation concept showing person's journey from illness to wellness, before and after split image or progression sequence, hopeful and inspiring, professional photography, warm lighting, person looking healthier and more vibrant on right side, natural outdoor setting",
+      "negative_prompt": "sad, clinical, hospital, dark, depressing",
+      "style": "photorealistic",
+      "aspect_ratio": "1.91:1"
+    },
+    {
+      "id": "expert-dr-rajni",
+      "filename": "expert-dr-rajni-samota.jpg",
+      "dimensions": "800x800",
+      "prompt": "Professional headshot of confident Indian female doctor in her 40s, warm genuine smile, compassionate expression, wearing professional attire, natural lighting, neutral cream background with subtle texture, approachable and trustworthy, high-quality portrait photography, wellness expert",
+      "negative_prompt": "clinical coat, hospital, serious, stern, dark background",
+      "style": "portrait photography",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "expert-dr-vincent",
+      "filename": "expert-dr-vincent-keny.jpg",
+      "dimensions": "800x800",
+      "prompt": "Professional headshot of wise Indian male wellness coach in his 50s, warm approachable smile, kind eyes, wearing casual professional attire, natural lighting, neutral cream background, experienced and trustworthy, high-quality portrait photography, life coach presence",
+      "negative_prompt": "suit and tie, corporate, serious, dark, clinical",
+      "style": "portrait photography",
+      "aspect_ratio": "1:1"
+    }
+  ],
+  "priority_3_supporting": [
+    {
+      "id": "success-diabetes-reversal",
+      "filename": "success-diabetes-reversal.jpg",
+      "dimensions": "800x600",
+      "prompt": "Happy Indian person checking blood sugar with glucose meter, showing positive results with smile, healthy lifestyle visible in background with fruits and exercise equipment, natural lighting, authentic and inspiring, lifestyle photography, hopeful and encouraging",
+      "negative_prompt": "clinical, hospital, sad, worried, dark",
+      "style": "photorealistic",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "success-weight-wellness",
+      "filename": "success-weight-wellness.jpg",
+      "dimensions": "800x600",
+      "prompt": "Confident Indian person in active lifestyle, jogging or doing yoga outdoors, energetic and positive expression, healthy and vibrant, natural outdoor setting, warm lighting, fitness and wellness concept, authentic lifestyle photography",
+      "negative_prompt": "gym, weights, extreme fitness, dark, clinical",
+      "style": "photorealistic",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "ayurveda-herbs-collection",
+      "filename": "ayurveda-herbs-collection.jpg",
+      "dimensions": "1200x800",
+      "prompt": "Collection of traditional Ayurvedic herbs and spices in wooden bowls on rustic table, turmeric powder, ashwagandha root, tulsi leaves, cinnamon sticks, natural lighting from window, authentic and organic, food photography style, warm earth tones",
+      "negative_prompt": "plastic, modern, artificial, cluttered, dark",
+      "style": "photorealistic",
+      "aspect_ratio": "3:2"
+    },
+    {
+      "id": "meditation-space-peaceful",
+      "filename": "meditation-space-peaceful.jpg",
+      "dimensions": "1200x800",
+      "prompt": "Serene meditation corner in Indian home, meditation cushion on floor, plants, natural wood elements, soft morning sunlight streaming through window, peaceful and inviting, interior photography, warm cream and gold tones, minimalist and calming",
+      "negative_prompt": "cluttered, dark, modern minimalist, cold",
+      "style": "photorealistic",
+      "aspect_ratio": "3:2"
+    },
+    {
+      "id": "healthy-ayurvedic-meal",
+      "filename": "healthy-ayurvedic-meal.jpg",
+      "dimensions": "1200x800",
+      "prompt": "Colorful Ayurvedic meal bowl with fresh vegetables, grains, herbs, and spices, top-down view, natural lighting, vibrant and appetizing, food photography, wooden table, authentic Indian ingredients, balanced and nourishing presentation",
+      "negative_prompt": "processed food, fast food, dark, unappetizing, messy",
+      "style": "photorealistic",
+      "aspect_ratio": "3:2"
+    },
+    {
+      "id": "contact-office-reception",
+      "filename": "contact-office-reception.jpg",
+      "dimensions": "1200x800",
+      "prompt": "Modern wellness center reception area in India, clean and inviting, plants and natural elements, warm lighting, comfortable seating, professional interior photography, cream and gold color scheme, welcoming atmosphere, contemporary Indian design",
+      "negative_prompt": "clinical, hospital, dark, cold, sterile",
+      "style": "photorealistic",
+      "aspect_ratio": "3:2"
+    }
+  ],
+  "icons_and_graphics": [
+    {
+      "id": "icon-soleus-muscle",
+      "filename": "icon-soleus.svg",
+      "dimensions": "512x512",
+      "prompt": "Minimalist icon of lower leg muscle in gold color, clean line art style, simple and recognizable, suitable for wellness website, vector graphic style, transparent background",
+      "negative_prompt": "realistic, detailed, colorful, complex",
+      "style": "vector icon",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "icon-meditation-lotus",
+      "filename": "icon-meditation.svg",
+      "dimensions": "512x512",
+      "prompt": "Person in lotus meditation pose icon, peaceful and simple, gold color, clean line art, minimalist illustration, suitable for wellness website, vector graphic style, transparent background",
+      "negative_prompt": "realistic, detailed, colorful, complex",
+      "style": "vector icon",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "icon-ayurveda-herbs",
+      "filename": "icon-ayurveda.svg",
+      "dimensions": "512x512",
+      "prompt": "Mortar and pestle with herbs icon, traditional Ayurvedic symbol, gold color, clean line art, simple and recognizable, vector graphic style, transparent background",
+      "negative_prompt": "realistic, detailed, colorful, complex",
+      "style": "vector icon",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "infographic-health-stats",
+      "filename": "infographic-health-stats.jpg",
+      "dimensions": "1200x1200",
+      "prompt": "Clean infographic showing wellness statistics - 50% blood sugar reduction, 62% insulin decrease, 6x calorie burn, modern data visualization with charts and icons, gold and green colors, professional design, easy to read, inspiring numbers",
+      "negative_prompt": "cluttered, dark, complex, hard to read",
+      "style": "infographic design",
+      "aspect_ratio": "1:1"
+    },
+    {
+      "id": "diagram-four-pillars",
+      "filename": "diagram-four-pillars.jpg",
+      "dimensions": "1200x1200",
+      "prompt": "Circular diagram showing 4 pillars of health - Physical, Mental, Emotional, Spiritual - interconnected with gold lines, professional infographic style, clean and balanced, icons for each pillar, warm color palette, educational design",
+      "negative_prompt": "cluttered, dark, complex, unbalanced",
+      "style": "infographic design",
+      "aspect_ratio": "1:1"
+    }
+  ],
+  "background_patterns": [
+    {
+      "id": "bg-subtle-texture",
+      "filename": "bg-cream-texture.jpg",
+      "dimensions": "1920x1080",
+      "prompt": "Cream colored paper texture, subtle and elegant, seamless pattern, soft and warm, high quality, suitable for website background, minimal noise, professional",
+      "negative_prompt": "busy, colorful, dark, rough, obvious pattern",
+      "style": "texture",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "bg-mandala-pattern",
+      "filename": "bg-mandala-gold.jpg",
+      "dimensions": "1920x1080",
+      "prompt": "Faint gold mandala pattern on cream background, spiritual and peaceful, subtle and elegant, seamless pattern, suitable for wellness website background, very light opacity, professional",
+      "negative_prompt": "busy, bold, dark, obvious, distracting",
+      "style": "pattern",
+      "aspect_ratio": "16:9"
+    }
+  ],
+  "generation_settings": {
+    "model": "nano-banana-2",
+    "quality": "high",
+    "format": "jpg",
+    "optimization": "web",
+    "color_space": "sRGB"
+  },
+  "batch_instructions": "Generate Priority 1 first (8 images), then Priority 2 (8 images), then Priority 3 (6 images). Total essential images: 22. Use consistent style and color palette across all images."
+}

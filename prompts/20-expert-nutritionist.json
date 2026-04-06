@@ -1,0 +1,12 @@
+{
+  "prompt": "Professional headshot of friendly Indian female nutrition expert in her 40s, warm approachable smile, intelligent and caring expression, wearing professional casual attire, natural lighting, neutral cream background with subtle texture, trustworthy and knowledgeable, high-quality portrait photography, health and wellness specialist, professional yet accessible, confident and compassionate",
+  "negative_prompt": "clinical coat, hospital, serious, stern, dark background, harsh lighting, overly formal, suit, multiple people, full body, cartoon, illustration, low quality, blurry, lab coat",
+  "width": 800,
+  "height": 800,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "portrait photography",
+  "quality": "high",
+  "filename": "expert-nutritionist.jpg"
+}

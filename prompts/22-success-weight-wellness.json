@@ -1,0 +1,12 @@
+{
+  "prompt": "Confident Indian person in their 40s jogging in peaceful park, energetic and positive expression, healthy and vibrant appearance, natural outdoor setting with trees and morning light, warm lighting, fitness and wellness concept, authentic lifestyle photography, active lifestyle, comfortable athletic wear, genuine smile, photorealistic, professional photography, inspiring health transformation",
+  "negative_prompt": "gym, weights, extreme fitness, dark, clinical, indoor, treadmill, multiple people, competitive, exhausted, cartoon, illustration, low quality, blurry, night time, rain",
+  "width": 800,
+  "height": 600,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "photorealistic",
+  "quality": "high",
+  "filename": "success-weight-wellness.jpg"
+}

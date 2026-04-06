@@ -1,0 +1,12 @@
+{
+  "prompt": "Colorful Ayurvedic thali meal in traditional brass plate, fresh vegetables including spinach and carrots, basmati rice, dal lentils, herbs and spices visible, top-down view, natural daylight from window, vibrant and appetizing, food photography, wooden table surface, authentic Indian ingredients, balanced and nourishing presentation, garnished with fresh coriander, warm color palette, professional food styling, photorealistic",
+  "negative_prompt": "processed food, fast food, dark, unappetizing, messy, western food, pizza, burger, artificial lighting, plastic plates, cartoon, illustration, low quality, blurry, empty plate, raw ingredients only",
+  "width": 1200,
+  "height": 800,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "photorealistic",
+  "quality": "high",
+  "filename": "healthy-ayurvedic-meal.jpg"
+}

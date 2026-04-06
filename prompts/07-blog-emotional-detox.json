@@ -1,0 +1,12 @@
+{
+  "prompt": "Indian person releasing emotion through expressive movement, arms raised upward, authentic and liberating expression of joy and freedom, artistic wellness photography, soft natural lighting, outdoor nature setting with trees and grass, emotional freedom concept, warm golden tones, photorealistic, 4K quality, natural movement, genuine emotion, peaceful background, shallow depth of field",
+  "negative_prompt": "sad, crying, dark, clinical, posed, stiff, artificial, cartoon, illustration, low quality, blurry, harsh lighting, busy background, text, watermark, stressed",
+  "width": 1200,
+  "height": 630,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "photorealistic",
+  "quality": "high",
+  "filename": "blog-emotional-detox.jpg"
+}

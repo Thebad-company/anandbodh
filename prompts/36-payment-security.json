@@ -1,0 +1,12 @@
+{
+  "prompt": "Secure payment and trust concept, padlock with gold accents, digital security, safe transaction, professional illustration, modern design, clean background, trustworthy and secure feeling, professional graphics",
+  "negative_prompt": "scary, dark, confusing, low quality, cartoon, unrealistic",
+  "width": 800,
+  "height": 600,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "digital illustration",
+  "quality": "high",
+  "filename": "payment-security.png"
+}

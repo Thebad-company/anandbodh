@@ -1,0 +1,12 @@
+{
+  "prompt": "Three panel composition showing elemental representations, left: flowing clouds and air representing Vata, center: warm flames and water representing Pitta, right: stones and flowing water representing Kapha, artistic elemental photography, balanced composition, natural elements, warm color palette with gold and earth tones, photorealistic, 4K quality, professional nature photography, soft lighting, harmonious",
+  "negative_prompt": "cartoon, illustration, dark, chaotic, unbalanced, low quality, blurry, people, text, watermark, harsh lighting, artificial, neon colors",
+  "width": 1200,
+  "height": 630,
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50,
+  "seed": -1,
+  "style": "photorealistic",
+  "quality": "high",
+  "filename": "blog-ayurveda-balance.jpg"
+}
