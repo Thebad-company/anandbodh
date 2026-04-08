@@ -35,9 +35,16 @@ export default function Navbar() {
     };
 
     const handleLogout = async () => {
-        await logout();
-        closeMenu();
-        router.push("/");
+        try {
+            await logout();
+            closeMenu();
+            router.push("/");
+        } catch (error) {
+            console.error("Logout error:", error);
+            // Still redirect even if logout fails
+            closeMenu();
+            router.push("/");
+        }
     };
 
     const getNameFromEmail = (email) => {
@@ -77,33 +84,30 @@ export default function Navbar() {
                         <Link href="/search" className="nav-signin">
                             🔍
                         </Link>
-                        {!loading && (
+                        {user ? (
                             <>
-                                {user ? (
-                                    <>
-                                        <Link href="/dashboard" className="nav-signin">
-                                            Welcome, {getNameFromEmail(user.email)}
-                                        </Link>
-                                        <button
-                                            onClick={handleLogout}
-                                            className="btn btn-primary nav-join desktop-only"
-                                        >
-                                            Logout →
-                                        </button>
-                                    </>
-                                ) : (
-                                    <>
-                                        <Link href="/signin" className="nav-signin">
-                                            Sign In
-                                        </Link>
-                                        <Link
-                                            href="/login"
-                                            className="btn btn-primary nav-join desktop-only"
-                                        >
-                                            Login →
-                                        </Link>
-                                    </>
-                                )}
+                                <Link href="/dashboard" className="nav-signin">
+                                    Welcome, {getNameFromEmail(user.email)}
+                                </Link>
+                                <button
+                                    type="button"
+                                    onClick={handleLogout}
+                                    className="btn btn-primary nav-join desktop-only"
+                                >
+                                    Logout →
+                                </button>
+                            </>
+                        ) : (
+                            <>
+                                <Link href="/signin" className="nav-signin">
+                                    Sign In
+                                </Link>
+                                <Link
+                                    href="/login"
+                                    className="btn btn-primary nav-join desktop-only"
+                                >
+                                    Login →
+                                </Link>
                             </>
                         )}
 
@@ -129,34 +133,31 @@ export default function Navbar() {
                 <Link href="/careers" onClick={closeMenu}>Careers</Link>
                 <Link href="/search" onClick={closeMenu}>Search</Link>
                 <Link href="/contact" onClick={closeMenu}>Contact</Link>
-                {!loading && (
+                {user ? (
                     <>
-                        {user ? (
-                            <>
-                                <Link href="/dashboard" className="mobile-signin" onClick={closeMenu}>
-                                    Welcome, {getNameFromEmail(user.email)}
-                                </Link>
-                                <button
-                                    onClick={handleLogout}
-                                    className="btn btn-primary"
-                                >
-                                    Logout
-                                </button>
-                            </>
-                        ) : (
-                            <>
-                                <Link href="/signin" className="mobile-signin" onClick={closeMenu}>
-                                    Sign In
-                                </Link>
-                                <Link
-                                    href="/login"
-                                    className="btn btn-primary"
-                                    onClick={closeMenu}
-                                >
-                                    Login
-                                </Link>
-                            </>
-                        )}
+                        <Link href="/dashboard" className="mobile-signin" onClick={closeMenu}>
+                            Welcome, {getNameFromEmail(user.email)}
+                        </Link>
+                        <button
+                            type="button"
+                            onClick={handleLogout}
+                            className="btn btn-primary"
+                        >
+                            Logout
+                        </button>
+                    </>
+                ) : (
+                    <>
+                        <Link href="/signin" className="mobile-signin" onClick={closeMenu}>
+                            Sign In
+                        </Link>
+                        <Link
+                            href="/login"
+                            className="btn btn-primary"
+                            onClick={closeMenu}
+                        >
+                            Login
+                        </Link>
                     </>
                 )}
             </div>
