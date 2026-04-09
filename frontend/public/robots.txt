@@ -1,0 +1,43 @@
+# Anandbodh Robots.txt
+# This file tells search engines which pages to crawl and index
+
+# Allow all bots to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow private/admin pages
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Disallow search and filter pages to prevent duplicate content
+Disallow: /search?
+Disallow: /filter?
+
+# Crawl delay (in seconds) - be respectful to server resources
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://anandbodh.com/sitemap.xml
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

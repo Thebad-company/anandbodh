@@ -11,6 +11,7 @@ import ForumsActivity from "@/components/ForumsActivity";
 import Method from "@/components/Method";
 import StatsBanner from "@/components/StatsBanner";
 import WhyChoose from "@/components/WhyChoose";
+import { OrganizationSchema, BreadcrumbSchema } from "@/components/StructuredData";
 
 // ─── LOTTIE JSON URLs (LottieFiles open-source CDN) ─────────────
 // We lazy-load via dynamic import trick using state
@@ -197,6 +198,10 @@ export default function Home() {
 
   return (
     <>
+      <OrganizationSchema />
+      <BreadcrumbSchema breadcrumbs={[
+        { name: "Home", url: "https://anandbodh.com" },
+      ]} />
       <Navbar />
       <main className="portal-page type-v2">
 
@@ -269,7 +274,7 @@ export default function Home() {
               <div className="hero-brand-content">
                 <div className="hero-tagline">REJUVENATION • VITALITY • LONGEVITY</div>
                 <h1 className="hero-brand-title">
-                  Increase Your<br /><em>Healthspan</em>
+                  Increase Your<br /><em>Healthspan</em> with Evidence-Based Wellness Programs
                 </h1>
                 <p className="hero-brand-sub">
                   <strong>FIRST INTEGRATED ECOSYSTEM</strong><br />on HEALTH SOLUTIONS &amp; WELLBEING.
@@ -384,7 +389,9 @@ export default function Home() {
             <p className="section-desc">
               We aim to address the <strong>Root Causes</strong> of <strong>health problems</strong> that are aggravated by{" "}
               <strong><u>Chronic Stress</u></strong> that has ongoing <strong>harmful effects</strong> on all aspects of your{" "}
-              <strong>body, mind and spirit.</strong>
+              <strong>body, mind and spirit.</strong> Our <Link href="/programs">evidence-based wellness programs</Link> combine{" "}
+              <Link href="/programs/soleus-activation">soleus activation</Link>, <Link href="/programs/meditation">meditation</Link>, and{" "}
+              <Link href="/programs/ayurveda">ayurvedic protocols</Link> to help you thrive.
             </p>
           </Reveal>
 
@@ -480,6 +487,7 @@ export default function Home() {
             <p className="section-desc">
               Bio-social harmony is the key to lasting health. Our bodies store emotional and physical stress
               in the tissues — leading to chronic conditions. Understanding this connection is the first step to healing.
+              Learn more about <Link href="/blog/stress-science">the science of stress</Link> and how our <Link href="/programs">wellness programs</Link> address it.
             </p>
           </Reveal>
           <Reveal direction="up" delay={150}>

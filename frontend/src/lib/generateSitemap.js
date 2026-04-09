@@ -1,6 +1,6 @@
 /**
- * Dynamic Sitemap Generation
- * This file generates the sitemap.xml dynamically for Next.js
+ * Sitemap Generator for Anandbodh
+ * Generates XML sitemap for search engine indexing
  */
 
 const BASE_URL = "https://anandbodh.com";
@@ -38,6 +38,15 @@ const routes = [
   { path: "/groups", priority: 0.7, changefreq: "weekly" },
   { path: "/success-stories", priority: 0.7, changefreq: "weekly" },
 
+  // User pages (low priority, no-index in robots.txt)
+  { path: "/dashboard", priority: 0.5, changefreq: "weekly" },
+  { path: "/signin", priority: 0.5, changefreq: "monthly" },
+  { path: "/login", priority: 0.5, changefreq: "monthly" },
+
+  // Legal pages
+  { path: "/privacy", priority: 0.3, changefreq: "yearly" },
+  { path: "/terms", priority: 0.3, changefreq: "yearly" },
+
   // Other pages
   { path: "/careers", priority: 0.6, changefreq: "monthly" },
   { path: "/insights", priority: 0.7, changefreq: "daily" },
@@ -45,17 +54,49 @@ const routes = [
   { path: "/experts", priority: 0.6, changefreq: "monthly" },
   { path: "/testimonials", priority: 0.6, changefreq: "monthly" },
   { path: "/faq", priority: 0.6, changefreq: "monthly" },
-
-  // Legal pages
-  { path: "/privacy", priority: 0.3, changefreq: "yearly" },
-  { path: "/terms", priority: 0.3, changefreq: "yearly" },
 ];
 
-export default function sitemap() {
-  return routes.map((route) => ({
-    url: `${BASE_URL}${route.path}`,
-    lastModified: new Date(),
-    changeFrequency: route.changefreq,
-    priority: route.priority,
-  }));
+/**
+ * Generate XML sitemap
+ */
+export function generateSitemap() {
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
+${routes
+  .map(
+    (route) => `  <url>
+    <loc>${BASE_URL}${route.path}</loc>
+    <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
+    <changefreq>${route.changefreq}</changefreq>
+    <priority>${route.priority}</priority>
+  </url>`
+  )
+  .join("\n")}
+</urlset>`;
+
+  return xml;
+}
+
+/**
+ * Generate sitemap index (for large sites with multiple sitemaps)
+ */
+export function generateSitemapIndex() {
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>${BASE_URL}/sitemap.xml</loc>
+    <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
+  </sitemap>
+</sitemapindex>`;
+
+  return xml;
+}
+
+/**
+ * Get all routes for dynamic generation
+ */
+export function getAllRoutes() {
+  return routes;
 }
