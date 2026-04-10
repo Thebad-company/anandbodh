@@ -3,11 +3,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
 import { Icon } from "@/components/Icons";
+import { generateMetadata, pageMetadata } from "@/lib/seoMetadata";
 
-export const metadata = {
-  title: "Our Experts | Anandbodh™ – Meet Our Wellness Leaders",
-  description: "Meet the world-class experts guiding your wellness journey. Doctors, Ayurvedic practitioners, and wellness coaches.",
-};
+export const metadata = generateMetadata({
+  title: pageMetadata.experts.title,
+  description: pageMetadata.experts.description,
+  keywords: pageMetadata.experts.keywords,
+  url: pageMetadata.experts.url,
+});
 
 export default function ExpertsPage() {
   const experts = [

@@ -11,7 +11,13 @@ import ForumsActivity from "@/components/ForumsActivity";
 import Method from "@/components/Method";
 import StatsBanner from "@/components/StatsBanner";
 import WhyChoose from "@/components/WhyChoose";
-import { OrganizationSchema, BreadcrumbSchema } from "@/components/StructuredData";
+import Footer from "@/components/Footer";
+import {
+  OrganizationSchema,
+  BreadcrumbSchema,
+  WebPageSchema,
+  WebSiteSchema,
+} from "@/components/StructuredData";
 
 // ─── LOTTIE JSON URLs (LottieFiles open-source CDN) ─────────────
 // We lazy-load via dynamic import trick using state
@@ -61,13 +67,13 @@ const mainNav = [
   { label: "Home", href: "/", icon: "🏠", active: true },
   { label: "Activity Feed", href: "/insights", icon: "📰" },
   { label: "Programs", href: "/programs", icon: "🎓" },
-  { label: "Groups", href: "/community", icon: "👥" },
-  { label: "Forums", href: "/community", icon: "💬" },
+  { label: "Groups", href: "/groups", icon: "👥" },
+  { label: "Forums", href: "/forums", icon: "💬" },
   { label: "Blog", href: "/blog", icon: "📝" },
 ];
 
 const personalNav = [
-  { label: "My Dashboard", href: "/contact", icon: "📊" },
+  { label: "My Dashboard", href: "/user-dashboard", icon: "📊" },
   { label: "My Jagruti Score", href: "/programs/wake-up-life", icon: "📈" },
 ];
 
@@ -83,7 +89,7 @@ const navShortcuts = [
   },
   {
     label: "Forums",
-    href: "/community",
+    href: "/forums",
     lottieUrl: "https://assets9.lottiefiles.com/packages/lf20_3uwmd5vi.json",
     fallback: "💬",
     color: "#5DAF8A",
@@ -91,7 +97,7 @@ const navShortcuts = [
   },
   {
     label: "Social Groups",
-    href: "/community",
+    href: "/groups",
     lottieUrl: "https://assets10.lottiefiles.com/packages/lf20_obhph3t0.json",
     fallback: "👥",
     color: "#E08A8A",
@@ -183,11 +189,11 @@ const activeGroups = [
 ];
 
 const recentPosts = [
-  { title: "Meditation as Medicine: The Science of Stillness", href: "/blog", emoji: "🧘" },
-  { title: "Emotional Detox: Healing Beyond the Physical Body", href: "/blog", emoji: "💚" },
-  { title: "Living In Tune: How Dosha Balance Creates Life Balances", href: "/blog", emoji: "☯️" },
-  { title: "When Disease Becomes Cure: A Medical View on Acute Illness", href: "/blog", emoji: "🩺" },
-  { title: "🌿 Inner Energy, Outer Health: The Secret Path to Healing", href: "/blog", emoji: "✨" },
+  { title: "Meditation as Medicine: The Science of Stillness", href: "/blog/meditation-as-medicine", emoji: "🧘" },
+  { title: "Emotional Detox: Healing Beyond the Physical Body", href: "/blog/emotional-detox", emoji: "💚" },
+  { title: "Living In Tune: How Dosha Balance Creates Life Balances", href: "/blog/ayurveda-balance", emoji: "☯️" },
+  { title: "Stress Science: How Chronic Stress Drives Lifestyle Disorders", href: "/blog/stress-science", emoji: "🩺" },
+  { title: "Inner Energy, Outer Health: The Secret Path to Healing", href: "/blog/reversing-disorders", emoji: "✨" },
 ];
 
 // ─── COMPONENT ───────────────────────────────────────────────────
@@ -199,9 +205,16 @@ export default function Home() {
   return (
     <>
       <OrganizationSchema />
+      <WebSiteSchema />
       <BreadcrumbSchema breadcrumbs={[
         { name: "Home", url: "https://anandbodh.com" },
       ]} />
+      <WebPageSchema
+        title="Anandbodh™ – The Happy Life | Increase Your Healthspan"
+        description="Evidence-based wellness programs that combine Soleus Activation, meditation, Ayurveda, and community support to reverse lifestyle disorders."
+        url="https://anandbodh.com"
+        image="https://anandbodh.com/hero-bg.png"
+      />
       <Navbar />
       <main className="portal-page type-v2">
 
@@ -252,11 +265,11 @@ export default function Home() {
         </nav>
 
         <div className="portal-sidebar-footer">
-          <Link href="/contact" className="portal-btn-full">
+          <Link href="/community" className="portal-btn-full">
             Join Community
           </Link>
           <div className="portal-auth-links">
-            <Link href="/contact" className="nav-auth">Sign In</Link>
+            <Link href="/login" className="nav-auth">Log In</Link>
           </div>
         </div>
       </aside>
@@ -370,13 +383,13 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="featured-post-ctas">
-              <Link href="/contact" className="featured-cta-primary">
-                Join The Happy Life Community 📣
+              <div className="featured-post-ctas">
+              <Link href="/community" className="featured-cta-primary">
+                Join The Happy Life Community
               </Link>
               <span className="featured-cta-or">Or</span>
-              <Link href="/about" className="featured-cta-secondary">
-                💡 Know What Is ĀnandBodh
+              <Link href="/blog/stress-science" className="featured-cta-secondary">
+                Explore Stress Science
               </Link>
             </div>
           </div>
@@ -535,7 +548,7 @@ export default function Home() {
 
         {/* Login Widget */}
         <div className="widget-card widget-login">
-          <h4>Sign In</h4>
+          <h3>Member Login</h3>
           <div className="login-field">
             <label>Username</label>
             <input
@@ -556,17 +569,17 @@ export default function Home() {
               className="login-input"
             />
           </div>
-          <Link href="/contact" className="login-btn">Log In</Link>
+          <Link href="/login" className="login-btn">Log In</Link>
           <p className="login-register">
             New here?{" "}
-            <Link href="/contact" className="login-register-link">Sign Up</Link>
+            <Link href="/signin" className="login-register-link">Sign Up</Link>
           </p>
         </div>
 
         {/* Active Groups Widget */}
         <div className="widget-card widget-groups">
           <div className="widget-header-row">
-            <h4>Groups</h4>
+            <h3>Groups</h3>
             <Link href="/community" className="widget-see-all">SEE ALL</Link>
           </div>
           <div className="widget-tabs">
@@ -590,7 +603,7 @@ export default function Home() {
         {/* Recent Posts Widget */}
         <div className="widget-card widget-posts">
           <div className="widget-header-row">
-            <h4>Recent Posts</h4>
+            <h3>Recent Posts</h3>
             <Link href="/blog" className="widget-see-all">SEE ALL</Link>
           </div>
           <ul className="posts-list">
@@ -612,7 +625,7 @@ export default function Home() {
               size={80}
             />
           </div>
-          <h4>Have You Done Your Soleus Today?</h4>
+          <h3>Have You Done Your Soleus Today?</h3>
           <p>🔥 Unlock <strong>the Secret</strong> to Boundless <strong>Energy</strong> and Vibrant <strong>Health!</strong></p>
           <Link href="/programs/soleus-activation" className="soleus-cta-btn">
             Join Soleus Activation
@@ -621,6 +634,7 @@ export default function Home() {
 
       </aside>
     </main>
+    <Footer />
     </>
   );
 }

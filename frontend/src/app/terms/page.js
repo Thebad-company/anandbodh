@@ -1,10 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { generateMetadata, pageMetadata } from "@/lib/seoMetadata";
 
-export const metadata = {
-  title: "Terms of Service | Anandbodh™",
-  description: "Our terms of service and conditions of use.",
-};
+export const metadata = generateMetadata({
+  title: pageMetadata.terms.title,
+  description: pageMetadata.terms.description,
+  keywords: pageMetadata.terms.keywords,
+  url: pageMetadata.terms.url,
+});
 
 export default function TermsPage() {
   return (

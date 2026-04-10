@@ -5,6 +5,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
 import Link from "next/link";
+import {
+  BreadcrumbSchema,
+  FAQSchema,
+  OrganizationSchema,
+  WebPageSchema,
+} from "@/components/StructuredData";
 
 export default function FAQPage() {
   const [openItems, setOpenItems] = useState({});
@@ -124,6 +130,27 @@ export default function FAQPage() {
 
   return (
     <>
+      <OrganizationSchema />
+      <BreadcrumbSchema
+        breadcrumbs={[
+          { name: "Home", url: "https://anandbodh.com" },
+          { name: "FAQ", url: "https://anandbodh.com/faq" },
+        ]}
+      />
+      <WebPageSchema
+        title="FAQ | Anandbodh™ – Wellness Questions Answered"
+        description="Get answers about Anandbodh programs, Soleus Activation, meditation, Ayurveda, memberships, and how to get started."
+        url="https://anandbodh.com/faq"
+        image="https://anandbodh.com/hero-bg.png"
+      />
+      <FAQSchema
+        faqs={faqs.flatMap((section) =>
+          section.questions.map((question) => ({
+            question: question.q,
+            answer: question.a,
+          }))
+        )}
+      />
       <Navbar />
       <main>
         <section className="page-hero">

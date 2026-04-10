@@ -3,11 +3,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Icon } from "@/components/Icons";
+import { generateMetadata, pageMetadata } from "@/lib/seoMetadata";
 
-export const metadata = {
-  title: "Careers at Anandbodh™ – Join Our Wellness Team",
-  description: "Join the Anandbodh team and help transform lives through wellness. Explore career opportunities in health, technology, and community.",
-};
+export const metadata = generateMetadata({
+  title: pageMetadata.careers.title,
+  description: pageMetadata.careers.description,
+  keywords: pageMetadata.careers.keywords,
+  url: pageMetadata.careers.url,
+});
 
 export default function CareersPage() {
   const openPositions = [

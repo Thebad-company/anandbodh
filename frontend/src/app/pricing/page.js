@@ -3,11 +3,14 @@ import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
 import Link from "next/link";
 import { Icon } from "@/components/Icons";
+import { generateMetadata, pageMetadata } from "@/lib/seoMetadata";
 
-export const metadata = {
-  title: "Pricing | Anandbodh™ – Wellness Plans",
-  description: "Choose the perfect wellness plan for your journey. Flexible pricing for all budgets.",
-};
+export const metadata = generateMetadata({
+  title: pageMetadata.pricing.title,
+  description: pageMetadata.pricing.description,
+  keywords: pageMetadata.pricing.keywords,
+  url: pageMetadata.pricing.url,
+});
 
 export default function PricingPage() {
   const plans = [

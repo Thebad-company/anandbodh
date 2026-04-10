@@ -2,11 +2,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StatsBanner from "@/components/StatsBanner";
 import FinalCTA from "@/components/FinalCTA";
+import { generateMetadata, pageMetadata } from "@/lib/seoMetadata";
 
-export const metadata = {
-  title: "Research & Science | Anandbodh™ – Evidence-Based Wellness",
-  description: "Explore the scientific research behind our wellness programs and protocols.",
-};
+export const metadata = generateMetadata({
+  title: pageMetadata.research.title,
+  description: pageMetadata.research.description,
+  keywords: pageMetadata.research.keywords,
+  url: pageMetadata.research.url,
+});
 
 export default function ResearchPage() {
   const studies = [

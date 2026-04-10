@@ -1,10 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { generateMetadata, pageMetadata } from "@/lib/seoMetadata";
 
-export const metadata = {
-  title: "Privacy Policy | Anandbodh™",
-  description: "Our privacy policy and commitment to protecting your personal information.",
-};
+export const metadata = generateMetadata({
+  title: pageMetadata.privacy.title,
+  description: pageMetadata.privacy.description,
+  keywords: pageMetadata.privacy.keywords,
+  url: pageMetadata.privacy.url,
+});
 
 export default function PrivacyPage() {
   return (

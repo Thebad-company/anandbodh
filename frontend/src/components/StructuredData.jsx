@@ -12,15 +12,38 @@ export function OrganizationSchema() {
     logo: "https://anandbodh.com/AnandBodhLogo-1536x512.jpg",
     description: "Evidence-based wellness platform combining physical, mental, emotional, and spiritual health.",
     sameAs: [
-      "https://twitter.com/anandbodh",
-      "https://facebook.com/anandbodh",
+      "https://www.youtube.com/@anandbodh",
       "https://instagram.com/anandbodh",
+      "https://facebook.com/anandbodh",
       "https://linkedin.com/company/anandbodh",
     ],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Support",
       email: "support@anandbodh.com",
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function WebSiteSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Anandbodh",
+    alternateName: "Anandbodh The Happy Life",
+    url: "https://anandbodh.com",
+    description: "Evidence-based wellness programs to reverse lifestyle disorders and improve healthspan.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://anandbodh.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string",
     },
   };
 

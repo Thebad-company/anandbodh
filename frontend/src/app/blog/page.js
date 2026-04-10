@@ -6,6 +6,11 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Icon } from "@/components/Icons";
 import { supabase } from "@/lib/supabase";
+import {
+  BreadcrumbSchema,
+  OrganizationSchema,
+  WebPageSchema,
+} from "@/components/StructuredData";
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("All Posts");
@@ -45,6 +50,19 @@ export default function BlogPage() {
 
   return (
     <>
+      <OrganizationSchema />
+      <BreadcrumbSchema
+        breadcrumbs={[
+          { name: "Home", url: "https://anandbodh.com" },
+          { name: "Blog", url: "https://anandbodh.com/blog" },
+        ]}
+      />
+      <WebPageSchema
+        title="Health & Wellness Blog | Anandbodh™ – Science-Backed Insights"
+        description="Read evidence-based wellness articles on meditation, Ayurveda, stress science, metabolic health, and healthspan."
+        url="https://anandbodh.com/blog"
+        image="https://anandbodh.com/hero-bg.png"
+      />
       <Navbar />
       <main className="blog-page">
         {/* Hero Section */}

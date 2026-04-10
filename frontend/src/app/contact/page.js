@@ -4,6 +4,12 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import {
+  BreadcrumbSchema,
+  LocalBusinessSchema,
+  OrganizationSchema,
+  WebPageSchema,
+} from "@/components/StructuredData";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -93,6 +99,30 @@ export default function ContactPage() {
 
   return (
     <>
+      <OrganizationSchema />
+      <BreadcrumbSchema
+        breadcrumbs={[
+          { name: "Home", url: "https://anandbodh.com" },
+          { name: "Contact", url: "https://anandbodh.com/contact" },
+        ]}
+      />
+      <WebPageSchema
+        title="Contact Anandbodh™ | Get in Touch"
+        description="Contact Anandbodh for program guidance, wellness support, partnerships, or questions about healthspan programs."
+        url="https://anandbodh.com/contact"
+        image="https://anandbodh.com/hero-bg.png"
+      />
+      <LocalBusinessSchema
+        email="hello@anandbodh.com"
+        url="https://anandbodh.com/contact"
+        address={{
+          streetAddress: "B1/21, Gandhi Path Rd, Vaishali Nagar",
+          addressLocality: "Jaipur",
+          addressRegion: "Rajasthan",
+          postalCode: "302021",
+          addressCountry: "IN",
+        }}
+      />
       <Navbar />
       <main className="contact-page">
         <section className="page-hero">

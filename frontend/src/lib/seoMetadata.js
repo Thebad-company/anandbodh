@@ -3,12 +3,15 @@
  * Centralized utility for generating consistent SEO metadata across all pages
  */
 
+const BASE_URL = "https://anandbodh.com";
+const DEFAULT_OG_IMAGE = `${BASE_URL}/hero-bg.png`;
+
 export const generateMetadata = ({
   title,
   description,
   keywords = [],
-  url = "https://anandbodh.com",
-  image = "https://anandbodh.com/og-image.jpg",
+  url = BASE_URL,
+  image = DEFAULT_OG_IMAGE,
   type = "website",
   author = "Anandbodh",
   publishedDate = null,
@@ -20,7 +23,12 @@ export const generateMetadata = ({
     title: fullTitle,
     description,
     keywords: Array.isArray(keywords) ? keywords.join(", ") : keywords,
-    metadataBase: new URL("https://anandbodh.com"),
+    metadataBase: new URL(BASE_URL),
+    authors: [{ name: author }],
+    creator: author,
+    publisher: "Anandbodh",
+    category: "Health & Wellness",
+    applicationName: "Anandbodh",
     alternates: {
       canonical: url,
     },
@@ -188,6 +196,71 @@ export const pageMetadata = {
     url: "https://anandbodh.com/dashboard",
   },
 
+  faq: {
+    title: "FAQ | Anandbodh™ – Wellness Questions Answered",
+    description: "Find answers about Anandbodh wellness programs, Soleus Activation, meditation, Ayurveda, memberships, and getting started.",
+    keywords: [
+      "wellness faq",
+      "soleus activation faq",
+      "meditation questions",
+      "ayurveda faq",
+      "anandbodh help",
+    ],
+    url: "https://anandbodh.com/faq",
+  },
+
+  research: {
+    title: "Research & Science | Anandbodh™ – Evidence-Based Wellness",
+    description: "Explore the scientific studies, evidence-based protocols, and wellness research that inform Anandbodh programs.",
+    keywords: [
+      "wellness research",
+      "soleus activation study",
+      "meditation science",
+      "ayurveda research",
+      "evidence-based wellness",
+    ],
+    url: "https://anandbodh.com/research",
+  },
+
+  experts: {
+    title: "Our Experts | Anandbodh™ – Wellness Leaders & Coaches",
+    description: "Meet the doctors, Ayurvedic practitioners, meditation teachers, and wellness experts guiding the Anandbodh community.",
+    keywords: [
+      "wellness experts",
+      "ayurveda specialists",
+      "meditation teachers",
+      "integrative medicine experts",
+      "anandbodh team",
+    ],
+    url: "https://anandbodh.com/experts",
+  },
+
+  careers: {
+    title: "Careers at Anandbodh™ – Join Our Wellness Team",
+    description: "Explore wellness, content, community, and technology roles at Anandbodh and help more people reverse lifestyle disorders.",
+    keywords: [
+      "anandbodh careers",
+      "wellness jobs",
+      "health startup careers",
+      "community manager jobs",
+      "wellness coach jobs",
+    ],
+    url: "https://anandbodh.com/careers",
+  },
+
+  insights: {
+    title: "Insights | Anandbodh™ – Wellness Knowledge Base",
+    description: "Explore wellness insights, practical guidance, and evidence-based education on stress, meditation, Ayurveda, and healthspan.",
+    keywords: [
+      "wellness insights",
+      "healthspan education",
+      "stress management articles",
+      "meditation insights",
+      "wellness knowledge base",
+    ],
+    url: "https://anandbodh.com/insights",
+  },
+
   privacy: {
     title: "Privacy Policy | Anandbodh™",
     description: "Read our privacy policy to understand how Anandbodh collects, uses, and protects your personal information.",
@@ -226,13 +299,13 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Anandbodh",
-  url: "https://anandbodh.com",
-  logo: "https://anandbodh.com/AnandBodhLogo-1536x512.jpg",
+  url: BASE_URL,
+  logo: `${BASE_URL}/AnandBodhLogo-1536x512.jpg`,
   description: "Evidence-based wellness platform combining physical, mental, emotional, and spiritual health.",
   sameAs: [
-    "https://twitter.com/anandbodh",
-    "https://facebook.com/anandbodh",
+    "https://www.youtube.com/@anandbodh",
     "https://instagram.com/anandbodh",
+    "https://facebook.com/anandbodh",
     "https://linkedin.com/company/anandbodh",
   ],
   contactPoint: {

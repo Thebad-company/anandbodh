@@ -2,6 +2,7 @@ import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/context/AuthContext";
 import { StripeProvider } from "@/context/StripeContext";
+import { generateMetadata, pageMetadata } from "@/lib/seoMetadata";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -17,52 +18,15 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Anandbodh™ – The Happy Life | Increase Your Healthspan",
-  description: "Evidence-based tools to reverse lifestyle disorders — combining Physical, Mental, Emotional & Spiritual health into one integrated system.",
-  keywords: "wellness programs, health coaching, meditation, ayurveda, soleus activation, lifestyle disorders, healthspan",
+  ...generateMetadata({
+    title: pageMetadata.home.title,
+    description: pageMetadata.home.description,
+    keywords: pageMetadata.home.keywords,
+    url: pageMetadata.home.url,
+  }),
   icons: {
     icon: "/favicon.jpeg",
     apple: "/apple-touch-icon.png",
-  },
-  metadataBase: new URL("https://anandbodh.com"),
-  alternates: {
-    canonical: "https://anandbodh.com",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://anandbodh.com",
-    siteName: "Anandbodh™",
-    title: "Anandbodh™ – The Happy Life | Increase Your Healthspan",
-    description: "Evidence-based tools to reverse lifestyle disorders — combining Physical, Mental, Emotional & Spiritual health into one integrated system.",
-    images: [
-      {
-        url: "https://anandbodh.com/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Anandbodh - The Happy Life",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Anandbodh™ – The Happy Life | Increase Your Healthspan",
-    description: "Evidence-based tools to reverse lifestyle disorders — combining Physical, Mental, Emotional & Spiritual health into one integrated system.",
-    images: ["https://anandbodh.com/og-image.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  verification: {
-    google: "google-site-verification-code", // Add your Google verification code
   },
 };
 
