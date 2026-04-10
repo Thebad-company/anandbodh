@@ -62,6 +62,39 @@ function Reveal({ children, delay = 0, className = "", direction = "up" }) {
   );
 }
 
+function VideoPlayer() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  if (!isPlaying) {
+    return (
+      <div className="video-placeholder" onClick={() => setIsPlaying(true)}>
+        <Image 
+          src="https://img.youtube.com/vi/VN0F7QJkd80/maxresdefault.jpg" 
+          alt="Video Thumbnail"
+          fill
+          className="video-placeholder-img"
+        />
+        <div className="video-play-button">
+          ▶
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="video-embed-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/VN0F7QJkd80?autoplay=1"
+          title="AnandBodh – Soleus Activation for Better Health"
+          style={{ border: 0 }}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="tissue-video"
+        ></iframe>
+    </div>
+  );
+}
+
 // ─── DATA ────────────────────────────────────────────────────────
 const mainNav = [
   { label: "Home", href: "/", icon: "🏠", active: true },
@@ -210,8 +243,8 @@ export default function Home() {
         { name: "Home", url: "https://anandbodh.com" },
       ]} />
       <WebPageSchema
-        title="Anandbodh™ – The Happy Life | Increase Your Healthspan"
-        description="Evidence-based wellness programs that combine Soleus Activation, meditation, Ayurveda, and community support to reverse lifestyle disorders."
+        title="Reverse Lifestyle Disorders | Increase Your Healthspan | Anandbodh™"
+        description="Evidence-based wellness programs to reverse lifestyle disorders and increase your healthspan. Discover our integrated physical, mental, and spiritual health ecosystem."
         url="https://anandbodh.com"
         image="https://anandbodh.com/hero-bg.png"
       />
@@ -287,10 +320,10 @@ export default function Home() {
               <div className="hero-brand-content">
                 <div className="hero-tagline">REJUVENATION • VITALITY • LONGEVITY</div>
                 <h1 className="hero-brand-title">
-                  Increase Your<br /><em>Healthspan</em> with Evidence-Based Wellness Programs
+                  Reverse <em>Lifestyle Disorders</em> &amp; Increase Your <em>Healthspan</em>
                 </h1>
                 <p className="hero-brand-sub">
-                  <strong>FIRST INTEGRATED ECOSYSTEM</strong><br />on HEALTH SOLUTIONS &amp; WELLBEING.
+                  <strong>EVIDENCE-BASED WELLNESS PROGRAMS</strong><br />The first integrated ecosystem on health solutions.
                 </p>
                 <p className="hero-brand-evidence">
                   <em>Evidence based</em> tools<br />to <em>reverse lifestyle disorders.</em>
@@ -331,7 +364,7 @@ export default function Home() {
               </div>
               <div className="hero-community-text">
                 <h2 className="hero-community-title">
-                  ✨ DISCOVER A SPACE WHERE HEALTH MEETS HARMONY ✨
+                  Evidence-Based Wellness Meets Harmony
                 </h2>
                 <p className="hero-community-sub">
                   🧘‍♀️ Mind + 🏃 Body + 🌿 Spirit = 🌟 The Happy Life, Thriving Together! 🌟
@@ -504,16 +537,7 @@ export default function Home() {
             </p>
           </Reveal>
           <Reveal direction="up" delay={150}>
-            <div className="video-embed-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/VN0F7QJkd80"
-                title="AnandBodh – Soleus Activation for Better Health"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="tissue-video"
-              ></iframe>
-            </div>
+            <VideoPlayer />
           </Reveal>
         </section>
 

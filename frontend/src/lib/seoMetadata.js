@@ -76,16 +76,16 @@ export const generateMetadata = ({
  */
 export const pageMetadata = {
   home: {
-    title: "Anandbodh™ – The Happy Life | Increase Your Healthspan",
-    description: "Evidence-based tools to reverse lifestyle disorders — combining Physical, Mental, Emotional & Spiritual health into one integrated system.",
+    title: "Reverse Lifestyle Disorders | Increase Your Healthspan | Anandbodh™",
+    description: "Evidence-based wellness programs to reverse lifestyle disorders and increase your healthspan. Discover our integrated physical, mental, and spiritual health ecosystem.",
     keywords: [
+      "reverse lifestyle disorders",
+      "increase healthspan",
+      "evidence-based wellness",
       "wellness programs",
-      "health coaching",
+      "soleus activation",
       "meditation",
       "ayurveda",
-      "soleus activation",
-      "lifestyle disorders",
-      "healthspan",
       "holistic health",
     ],
     url: "https://anandbodh.com",

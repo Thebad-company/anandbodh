@@ -10,6 +10,7 @@ import {
   OrganizationSchema,
   WebPageSchema,
 } from "@/components/StructuredData";
+import EmailObfuscator from "@/components/EmailObfuscator";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -149,11 +150,12 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+
                   <div className="contact-detail-item">
                     <div className="contact-icon">✉️</div>
                     <div>
                       <strong>Email</strong>
-                      <p><a href="mailto:hello@anandbodh.com">hello@anandbodh.com</a></p>
+                      <p><EmailObfuscator email="hello@anandbodh.com" /></p>
                     </div>
                   </div>
 

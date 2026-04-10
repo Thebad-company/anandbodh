@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import EmailObfuscator from "./EmailObfuscator";
 
 export default function Footer() {
     return (
@@ -8,15 +9,7 @@ export default function Footer() {
                 <div className="footer-grid">
                     {/* Brand */}
                     <div className="footer-brand">
-                        <div
-                            style={{
-                                background: "rgba(255,255,255,0.92)",
-                                padding: "8px 12px",
-                                borderRadius: "8px",
-                                display: "inline-block",
-                                marginBottom: "1.25rem",
-                            }}
-                        >
+                        <div className="footer-logo-bg">
                             <Image
                                 src="/AnandBodhLogo-1536x512.jpg"
                                 alt="Anandbodh Logo"
@@ -29,17 +22,11 @@ export default function Footer() {
                             The first integrated ecosystem on health solutions & wellbeing.
                             Evidence-based tools to reverse lifestyle disorders.
                         </p>
-                        <p
-                            style={{
-                                fontSize: "0.8rem",
-                                color: "rgba(255,255,255,0.5)",
-                                margin: "0.5rem 0 1rem",
-                            }}
-                        >
+                        <p className="footer-contact-info">
                             📍 B1/21, Gandhi Path Rd, Vaishali Nagar, Jaipur, Rajasthan 302021,
                             India
                             <br />
-                            ✉️ hello@anandbodh.com
+                            ✉️ <EmailObfuscator email="hello@anandbodh.com" />
                         </p>
                         <div className="footer-socials">
                             <Link

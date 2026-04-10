@@ -24,6 +24,92 @@
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ─── Optimized Video Player ─── */
+.video-placeholder {
+  cursor: pointer;
+  position: relative;
+  aspect-ratio: 16/9;
+  background: var(--text-dark);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-placeholder-img {
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.video-play-button {
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transition: var(--transition);
+}
+
+.video-placeholder:hover .video-play-button {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ─── Utility Classes to replace inline styles ─── */
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-full { border-radius: var(--radius-full); }
+
+.opacity-50 { opacity: 0.5; }
+.opacity-60 { opacity: 0.6; }
+
+.footer-logo-bg {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+.footer-contact-info {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0.5rem 0 1rem;
+}
+
+.footer-contact-info a {
+  color: inherit;
+  transition: var(--transition);
+}
+
+.footer-contact-info a:hover {
+  color: var(--white);
+}
+
 /* ─── Reset & Base ─── */
 *,
 *::before,
