@@ -73,7 +73,7 @@ export default function Navbar() {
 
                     <div className="nav-links">
                         <Link href="/programs">Programs</Link>
-                        <Link href="/community">Community</Link>
+                        <Link href="/forums">Community</Link>
                         <Link href="/insights">Insights</Link>
                         <Link href="/about">About</Link>
                         <Link href="/careers">Careers</Link>
@@ -127,7 +127,7 @@ export default function Navbar() {
 
             <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`} id="mobile-menu">
                 <Link href="/programs" onClick={closeMenu}>Programs</Link>
-                <Link href="/community" onClick={closeMenu}>Community</Link>
+                <Link href="/forums" onClick={closeMenu}>Community</Link>
                 <Link href="/insights" onClick={closeMenu}>Insights</Link>
                 <Link href="/about" onClick={closeMenu}>About</Link>
                 <Link href="/careers" onClick={closeMenu}>Careers</Link>

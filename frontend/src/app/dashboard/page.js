@@ -221,9 +221,21 @@ export default function DashboardPage() {
               <div className="quick-actions-grid">
                 <Link href="/community" className="action-card">
                   <Icon name="Users" size={32} className="action-icon" />
-                  <h3>Join Community</h3>
-                  <p>Connect with members</p>
+                  <h3>Community Hub</h3>
+                  <p>Join discussions & groups</p>
                 </Link>
+                <Link href="/forums" className="action-card">
+                  <Icon name="Message" size={32} className="action-icon" />
+                  <h3>Forum Discussions</h3>
+                  <p>Share & learn together</p>
+                </Link>
+                {userProfile?.role === 'admin' && (
+                  <Link href="/admin/community" className="action-card admin-card">
+                    <Icon name="Settings" size={32} className="action-icon" />
+                    <h3>Manage Community</h3>
+                    <p>Admin community tools</p>
+                  </Link>
+                )}
                 <Link href="/blog" className="action-card">
                   <Icon name="Book" size={32} className="action-icon" />
                   <h3>Read Articles</h3>
@@ -239,6 +251,62 @@ export default function DashboardPage() {
                   <h3>Get Support</h3>
                   <p>We're here to help</p>
                 </Link>
+              </div>
+            </div>
+
+            {/* Community Management */}
+            <div className="dashboard-section">
+              <h2>Community Management</h2>
+              <div className="community-management-grid">
+                <Link href="/forums" className="community-card">
+                  <Icon name="MessageSquare" size={32} className="community-icon" />
+                  <div className="community-content">
+                    <h3>Forum Discussions</h3>
+                    <p>Start or join conversations with the community</p>
+                    <div className="community-stats">
+                      <span>💬 Active discussions</span>
+                      <span>👥 Connect with members</span>
+                    </div>
+                  </div>
+                </Link>
+                
+                <Link href="/community/groups" className="community-card">
+                  <Icon name="Users" size={32} className="community-icon" />
+                  <div className="community-content">
+                    <h3>Community Groups</h3>
+                    <p>Join specialized groups based on your interests</p>
+                    <div className="community-stats">
+                      <span>🏘️ Interest-based groups</span>
+                      <span>🤝 Find your tribe</span>
+                    </div>
+                  </div>
+                </Link>
+
+                <Link href="/community/events" className="community-card">
+                  <Icon name="Calendar" size={32} className="community-icon" />
+                  <div className="community-content">
+                    <h3>Community Events</h3>
+                    <p>Participate in live sessions and workshops</p>
+                    <div className="community-stats">
+                      <span>📅 Upcoming events</span>
+                      <span>🎯 Expert sessions</span>
+                    </div>
+                  </div>
+                </Link>
+
+                {userProfile?.role === 'admin' && (
+                  <Link href="/admin/community" className="community-card admin-community-card">
+                    <Icon name="Shield" size={32} className="community-icon" />
+                    <div className="community-content">
+                      <h3>Admin Controls</h3>
+                      <p>Manage community settings, moderate content</p>
+                      <div className="community-stats">
+                        <span>⚙️ Community settings</span>
+                        <span>🛡️ Moderation tools</span>
+                      </div>
+                    </div>
+                  </Link>
+                )}
               </div>
             </div>
 

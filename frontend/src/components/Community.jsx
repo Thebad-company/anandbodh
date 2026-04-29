@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { getCommunityGroups, getCommunityStats } from "@/lib/communityApi";
 
 const Counter = ({ end, suffix = "", duration = 2000 }) => {
     const [count, setCount] = useState(0);
@@ -30,49 +31,89 @@ const Counter = ({ end, suffix = "", duration = 2000 }) => {
 };
 
 export default function Community() {
-    const stats = [
+    const [stats, setStats] = useState([
         { end: 10000, suffix: "+", label: "Active Members" },
         { end: 12, suffix: "", label: "Healing Groups" },
         { end: 250, suffix: "+", label: "Expert Sessions" },
         { end: 48, suffix: "", label: "Cities Represented" },
-    ];
+    ]);
+    const [groups, setGroups] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    const groups = [
-        {
-            icon: "🌅",
-            bg: "#EBF2E3",
-            name: "जागृति – Wake Up Life",
-            members: "General wellness & awareness • Active now",
-        },
-        {
-            icon: "💼",
-            bg: "#F0EEF9",
-            name: "उत्कर्ष – Thrive@Work",
-            members: "Professional wellbeing • Active now",
-        },
-        {
-            icon: "🌿",
-            bg: "var(--gold-pale)",
-            name: "आयुर्वेद – Āyurveda Longevity Knowledge",
-            members: "Traditional wisdom & longevity",
-            pulseColor: "#C8943A",
-            pulseShadow: "rgba(200,148,58,0.2)",
-        },
-        {
-            icon: "🧘",
-            bg: "var(--green-subtle)",
-            name: "ध्यानम् – Dhyan Meditation",
-            members: "Mental peace & mindfulness",
-        },
-        {
-            icon: "🔄",
-            bg: "#FDF0EB",
-            name: "कायाकल्पम् – Lifestyle Disorders Reversal",
-            members: "Metabolic health focus",
-            pulseColor: "#C8943A",
-            pulseShadow: "rgba(200,148,58,0.2)",
-        },
-    ];
+    useEffect(() => {
+        async function loadCommunityData() {
+            try {
+                // Load community stats
+                const { data: statsData } = await getCommunityStats();
+                if (statsData) {
+                    setStats([
+                        { end: statsData.totalMembers || 10000, suffix: "+", label: "Active Members" },
+                        { end: statsData.totalGroups || 12, suffix: "", label: "Healing Groups" },
+                        { end: statsData.totalPosts || 250, suffix: "+", label: "Expert Sessions" },
+                        { end: 48, suffix: "", label: "Cities Represented" },
+                    ]);
+                }
+
+                // Load community groups
+                const { data: groupsData } = await getCommunityGroups();
+                if (groupsData && groupsData.length > 0) {
+                    setGroups(groupsData.map(group => ({
+                        id: group.id,
+                        icon: group.icon || "🌿",
+                        bg: group.background_color || "#EBF2E3",
+                        name: group.name,
+                        members: `${group.current_member_count || 0} members • ${group.description}`,
+                        pulseColor: group.category === 'ayurveda' ? "#C8943A" : "#4CAF50",
+                        pulseShadow: group.category === 'ayurveda' ? "rgba(200,148,58,0.2)" : "rgba(76, 175, 80, 0.2)",
+                    })));
+                } else {
+                    // Fallback to static data if no groups in database
+                    setGroups([
+                        {
+                            icon: "🌅",
+                            bg: "#EBF2E3",
+                            name: "जागृति – Wake Up Life",
+                            members: "General wellness & awareness • Active now",
+                        },
+                        {
+                            icon: "💼",
+                            bg: "#F0EEF9",
+                            name: "उत्कर्ष – Thrive@Work",
+                            members: "Professional wellbeing • Active now",
+                        },
+                        {
+                            icon: "🌿",
+                            bg: "var(--gold-pale)",
+                            name: "आयुर्वेद – Āyurveda Longevity Knowledge",
+                            members: "Traditional wisdom & longevity",
+                            pulseColor: "#C8943A",
+                            pulseShadow: "rgba(200,148,58,0.2)",
+                        },
+                        {
+                            icon: "🧘",
+                            bg: "var(--green-subtle)",
+                            name: "ध्यानम् – Dhyan Meditation",
+                            members: "Mental peace & mindfulness",
+                        },
+                        {
+                            icon: "🔄",
+                            bg: "#FDF0EB",
+                            name: "कायाकल्पम् – Lifestyle Disorders Reversal",
+                            members: "Metabolic health focus",
+                            pulseColor: "#C8943A",
+                            pulseShadow: "rgba(200,148,58,0.2)",
+                        },
+                    ]);
+                }
+            } catch (error) {
+                console.error('Error loading community data:', error);
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        loadCommunityData();
+    }, []);
 
     return (
         <section id="community" className="section" aria-labelledby="community-heading">
@@ -98,7 +139,7 @@ export default function Community() {
                         </div>
 
                         <Link
-                            href="#final-cta"
+                            href="/forums"
                             className="btn btn-green"
                             style={{ marginTop: "2rem" }}
                             id="community-join-btn"
@@ -123,7 +164,7 @@ export default function Community() {
                         </p>
 
                         {groups.map((group, index) => (
-                            <div key={index} className="community-group">
+                            <div key={group.id || index} className="community-group">
                                 <div className="group-icon" style={{ background: group.bg }}>
                                     {group.icon}
                                 </div>
